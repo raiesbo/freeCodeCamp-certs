@@ -27,8 +27,8 @@ function checkCashRegister(price, cash, cid) {
 	let arrKey = Object.keys(moneyVal).reverse()
 	// PREPARING THE CID OBJ
 	let cidVal = Object.values(cidBalance).reverse()
-	// COINS CALCULATOR
 
+	// COINS CALCULATOR
 	for (let i = 0; i < arrVal.length; i++) {
 		let coinsNum = Math.floor(change / arrVal[i])
 		// CHECK RESOURCES
