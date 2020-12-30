@@ -1,10 +1,10 @@
 # freeCodeCamp
 
-Final projects of each obtained freeCodeCamp certificates.
+Final projects of each obtained freeCodeCamp certification.
 
 ## Responsive Web Design Certification
 
-- [ ] Build a Tribute Page
+- [x] Build a Tribute Page
 - [ ] Build a Survey Form
 - [ ] Build a Product Landing Page
 - [ ] Build a Technical Documentation Page
