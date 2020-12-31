@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="title">Gamer's Survey Form</h1>
+            <h2 id="description">Survey about the Gaming trends of each year.</h2>
+        </header>
+        <main id="survey">
+
+            <form id="survey-form">
+
+                <label class="subtitle" id="name-label" for="name">Name</label>
+                <input type="text" id="survey-form" name="name" placeholder="Max Mustermann" required>
+
+                <label class="subtitle" id="email-label" for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="mustermann@gmail.com" required>
+
+                <label class="subtitle" id="number-label" for="number">Age <span class="optional">(optional)</span></label>
+                <input type="number" id="number" name="number" min="1" max="100" placeholder="25">
+
+                <label class="subtitle" id="dropdown-label" for="dropdown">How often do you play games?</label>
+                <select type="dropdown" id="dropdown">
+                    <option > < 2h / day</option>
+                    <option > > 2h / day</option>
+                    <option > > 5h / day</option>
+                </select>
+
+                <label class="subtitle">How much do you play every day?</label>
+                <fieldset>
+                    <input type="radio" id="lookingJob" name="employment">
+                    <label for="lookingJob" class="sub">Looking for Job</label><br>
+                    <input type="radio" id="notLookingJob" name="employment">
+                    <label for="notLookingJob" class="sub">Not looking for Job</label><br>
+                    <input type="radio" id="student" name="employment">
+                    <label for="student" class="sub">Studing</label>
+                </fieldset>
+
+
+                <label class="subtitle">What gaming platforms do you use?</label>
+                <fieldset>
+                    <input type="checkbox" id="play" name="play">
+                    <label for="play" class="sub">Play Station</label><br>
+                    <input type="checkbox" id="nintendo" name="nintendo">
+                    <label for="nintendo" class="sub">Nintendo</label><br>
+                    <input type="checkbox" id="xbox" name="xbox">
+                    <label for="xbox" class="sub">Xbox</label>
+               </fieldset>
+
+
+                <label class="subtitle" id="comments-label" for="comments">Anything else that you would like to share with us?</label>
+                <textarea type="textarea" name="comments" placeholder="Write here any commnets you want..."></textarea>
+
+                <button id="submit">Submit</button>
+            </form>
+
+        </main>
+
+        <footer>
+            <h4>Built by RAIESBO with HTML / CSS - 2020</h3>
+        </footer>
+         
+    </body>
+</html>
