@@ -10,7 +10,6 @@ body {
 
 header {
     position: fixed;
-    /* min-width: 290px; */
     min-width: 250px;
     height: 100%;
     background-color: white;
@@ -44,6 +43,14 @@ li a {
     color: #4d4e53;
 }
 
+#footer {
+    padding: 0 10px 0 15px;
+    bottom: 0;
+    color: #888888;
+    font-weight: 700;
+}
+
+
 
 
 
@@ -71,4 +78,13 @@ li a {
     border-radius: 5px;
     padding: 15px;
     font-size: 0.8em;
+}
+
+.points {
+    margin-left: 30px;
+}
+
+.points li {
+    margin: 10px 0 0 0;
+    font-size: 0.95em;
 }

@@ -31,6 +31,7 @@
 				<li><a href="#function">Function declarations</a></li>
 				<li><a href="#refs">Reference</a></li>
 			</ul>
+			<h5 id="footer">Built by RAIESBO</h5>
 		</nav>
 
 	</header>
@@ -43,12 +44,23 @@
 				Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of
 				its environment to provide
 				programmatic control over them.</p>
-			<p class="description"></p>
+			<p class="description">JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set
+				 of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety
+				  of purposes by supplementing it with additional objects; for example:</p>
+			<ul class="points">
+				<li class="point">Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.</li>
+				<li class="point">Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
+			</ul>
 		</section>
 
 		<section id="alreadyKnow">
 			<h2 class="title">Why you should already know</h2>
-			<p class="description"></p>
+			<p class="description">This guide assumes you have the following basic background:</p>
+			<ul class="points">
+				<li class="point">A general understanding of the Internet and the World Wide Web (WWW).</li>
+				<li class="point">Good working knowledge of HyperText Markup Language (HTML).</li>
+				<li class="point">Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</li>
+			</ul>
 		</section>
 
 		<section id="java">
@@ -170,7 +182,18 @@
 		<section id="dataTypes">
 			<h2 class="title">Data types</h2>
 			<p class="description">The latest ECMAScript standard defines seven data types:</p>
-
+			<ul class="points">
+				<li class="point">Six data types that are primitives:</li>
+				<ul class="points2">
+					<li class="point2">Boolean. true and false.</li>
+					<li class="point2">null. A special keyword denoting a null value. Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.</li>
+					<li class="point2">undefined. A top-level property whose value is undefined.</li>
+					<li class="point2">Number. 42 or 3.14159.</li>
+					<li class="point2">String. "Howdy"</li>
+					<li class="point2">Symbol (new in ECMAScript 2015). A data type whose instances are unique and immutable.</li>
+				</ul>
+				<li class="point">and Object</li>
+			</ul>
 			<p class="description"></p>
 			<p class="description">Although these data types are a relatively small amount, they enable you to perform
 				useful functions with your applications.
@@ -228,10 +251,15 @@
 			<p class="description">Example:</p>
 			<p class="description">The following while loop iterates as long as n is less than three:</p>
 			<p class="code">var n = 0; var x = 0; while (n < 3) { n++; x +=n; }</p>
-					<p class="description">With each iteration, the loop increments n and adds that value to x.
-						Therefore, x and n take on the following values:</p>
-					<p class="description">After completing the third pass, the condition n < 3 is no longer true, so
-							the loop terminates.</p>
+			<p class="description">With each iteration, the loop increments n and adds that value to x.
+				Therefore, x and n take on the following values:</p>
+			<ul class="points">
+				<li class="point">After the first pass: n = 1 and x = 1</li>
+				<li class="point">After the second pass: n = 2 and x = 3</li>
+				<li class="point">After the third pass: n = 3 and x = 6</li>
+			</ul>
+			<p class="description">After completing the third pass, the condition n < 3 is no longer true, so
+				the loop terminates.</p>
 		</section>
 
 
@@ -239,6 +267,11 @@
 			<h2 class="title">Function declarations</h2>
 			<p class="description">A function definition (also called a function declaration, or function statement)
 				consists of the function keyword, followed by:</p>
+			<ul class="points">
+				<li class="point">The name of the function.</li>
+				<li class="point">A list of arguments to the function, enclosed in parentheses and separated by commas.</li>
+				<li class="point">The JavaScript statements that define the function, enclosed in curly brackets, { }.</li>
+			</ul>
 			<p class="description">For example, the following code defines a simple function named square:</p>
 			<p class="code">function square(number) { return number * number; }</p>
 			<p class="description">The function square takes one argument, called number. The function consists of one
@@ -253,18 +286,13 @@
 
 		<section id="refs">
 			<h2 class="title">Reference</h2>
-			<p class="description"></p>
+			<ul class="points">
+				<li class="point">All the documentation in this page is taken from MDN</li>
+			</ul>
 		</section>
 
 	</main>
 
-
-	<footer>
-
-
-
-
-	</footer>
 
 </body>
 
