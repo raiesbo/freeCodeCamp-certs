@@ -26,7 +26,7 @@ header {
 }
 
 nav {
-    width: 450px;
+    width: 300px;
 }
 
 nav ul {
@@ -54,7 +54,7 @@ li a {
 
 @media screen and (max-width: 800px) {
     nav {
-        width: 300px;
+        width: 2500px;
     }
 }
 
@@ -74,9 +74,6 @@ main {
     text-align: center;
     width: 80%;
 }
-
-
-
 
 
 #mainPoints {
@@ -102,7 +99,7 @@ main {
 }
 
 
-.point h3 {
+.point h4 {
     grid-area: title;
     margin: 30px 0 0 0;
 }
@@ -113,6 +110,10 @@ main {
 }
 
 
+
+iframe{
+    margin-top: 30px;
+}
 
 
 
@@ -161,20 +162,20 @@ main {
         margin:  20px auto 20px auto;
     }
     .service {
-        margin-bottom: 30px;
+        margin-bottom: 20;
     }
 }
 
 
-#contact {
+#form {
     text-align: center;
 }
 
-#contact h2{
+#form h2{
     margin: 50px 0 0 0;
 }
 
-#contact p {
+#form p {
     margin: 5px 0 0 0;
 }
 
@@ -206,7 +207,7 @@ main {
     border-width: 0.5px;
 }
 
-.form button {
+.form #submit {
     margin-top: 15px;
     font-weight: 600;
     height: 30px;

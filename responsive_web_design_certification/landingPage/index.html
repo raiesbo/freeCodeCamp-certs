@@ -8,20 +8,20 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 </head>
 
 <body>
     <header id="header">
         <div id="menu">
-            <h1>La Bou</h1>
-
-            <nav id="nav-link">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#offers">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            <img id="header-img" src="https://cdn3.vectorstock.com/i/thumb-large/23/77/book-icon-logo-vector-2982377.jpg" alt="book" width="40">
+            <h1 >La Bou</h1>
+            <nav id="nav-bar">
+                <ul id="nav-link">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#offers" class="nav-link">Services</a></li>
+                    <li><a href="#form" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -59,7 +59,10 @@
                         base that lastet for 50 years so far.</p>
                 </div>
 
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/watch?v=q4xjixxk9xw" frameborder="0" allowfullscreen=""></iframe>
+
             </div>
+
 
         </section>
 
@@ -86,17 +89,17 @@
             </div>
         </section>
 
-        <form id="contact">
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
             <h2>Contact us:</h2>
             <p>If you want to stay up to date with all the news or send us a request, please fill the form.</p>
             <div class="form">
                 <label for="Name">Name and Surname:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="name" required>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="email" required>
                 <label for="comments">Comments:</label>
                 <textarea id="comments">Write us here for more info about any product or suggestion...</textarea>
-                <button type="submit">Submit</button>
+                <input id="submit" type="submit" value="Submit">
             </div>
         </form>
 

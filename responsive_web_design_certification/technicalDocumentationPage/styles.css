@@ -8,7 +8,7 @@ body {
     line-height: 1.5;
 }
 
-header {
+#tro {
     position: fixed;
     min-width: 250px;
     height: 100%;
@@ -20,19 +20,19 @@ header {
     overflow: auto;
 }
 
-header h1 {
+#tro h1 {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 1.5em;
     padding-left: 15px;
     font-weight: 400;
 }
 
-header ul {
+#tro ul {
     list-style-type: none;
     padding: 0 0 0 0;
 }
 
-header li {
+#tro li {
     border: solid;
     border-width: 1px 0 0 0;
     padding: 5px 10px 5px 15px;
@@ -45,12 +45,15 @@ li a {
 
 #footer {
     padding: 0 10px 0 15px;
-    bottom: 0;
-    color: #888888;
+    color: #9c9c9c;
     font-weight: 700;
 }
 
-
+@media screen and (max-width: 800px) {
+    #footer {
+        font-weight: 600;
+    }
+}
 
 
 
@@ -60,11 +63,11 @@ li a {
     width: 100vw - 250px;
 }
 
-#main-doc h2 {
+#main-doc header {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 1.8em;
     text-align: left;
-    margin: 0px;
+    margin: 10px 0 0 0;
     font-weight: 400;
 }
 
@@ -77,7 +80,7 @@ li a {
     background-color: #e4e4e4;
     border-radius: 5px;
     padding: 15px;
-    font-size: 0.8em;
+    line-height: 2.5;
 }
 
 .points {
@@ -88,3 +91,4 @@ li a {
     margin: 10px 0 0 0;
     font-size: 0.95em;
 }
+

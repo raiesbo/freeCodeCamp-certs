@@ -7,21 +7,22 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </head>
     <body>
         <header>
             <h1 id="title">Gamer's Survey Form</h1>
-            <h2 id="description">Survey about the Gaming trends of each year.</h2>
+            <p id="description">Survey about the Gaming trends of each year.</p>
         </header>
         <main id="survey">
 
             <form id="survey-form">
 
                 <label class="subtitle" id="name-label" for="name">Name</label>
-                <input type="text" id="survey-form" name="name" placeholder="Max Mustermann" required>
+                <input type="text" id="name" name="name" placeholder="Max Mustermann" required>
 
                 <label class="subtitle" id="email-label" for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="mustermann@gmail.com" required>
+                <input type="email" id="email" name="email" placeholder="mustermann@gmail.com" required>
 
                 <label class="subtitle" id="number-label" for="number">Age <span class="optional">(optional)</span></label>
                 <input type="number" id="number" name="number" min="1" max="100" placeholder="25">
@@ -35,22 +36,22 @@
 
                 <label class="subtitle">How much do you play every day?</label>
                 <fieldset>
-                    <input type="radio" id="lookingJob" name="employment">
+                    <input type="radio" id="lookingJob" name="employment" value="looking for job">
                     <label for="lookingJob" >Looking for Job</label><br>
-                    <input type="radio" id="notLookingJob" name="employment">
+                    <input type="radio" id="notLookingJob" name="employment" value="not looking for job">
                     <label for="notLookingJob" >Not looking for Job</label><br>
-                    <input type="radio" id="student" name="employment">
+                    <input type="radio" id="student" name="employment" value="studing">
                     <label for="student" >Studing</label>
                 </fieldset>
 
 
                 <label class="subtitle">What gaming platforms do you use?</label>
                 <fieldset>
-                    <input type="checkbox" id="play" name="play">
+                    <input type="checkbox" id="play" name="play" value="play">
                     <label for="play" >Play Station</label><br>
-                    <input type="checkbox" id="nintendo" name="nintendo">
+                    <input type="checkbox" id="nintendo" name="nintendo" value="nintendo">
                     <label for="nintendo" >Nintendo</label><br>
-                    <input type="checkbox" id="xbox" name="xbox">
+                    <input type="checkbox" id="xbox" name="xbox" value="xbox">
                     <label for="xbox" >Xbox</label>
                </fieldset>
 
