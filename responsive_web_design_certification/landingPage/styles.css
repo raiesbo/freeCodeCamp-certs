@@ -102,7 +102,7 @@ main {
 }
 
 
-.point h4 {
+.point h3 {
     grid-area: title;
     margin: 30px 0 0 0;
 }
