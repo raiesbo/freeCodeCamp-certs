@@ -6,7 +6,7 @@ Final projects of each obtained freeCodeCamp certification.
 
 - [x] Build a Tribute Page
 - [x] Build a Survey Form
-- [ ] Build a Product Landing Page
+- [x] Build a Product Landing Page
 - [ ] Build a Technical Documentation Page
 - [ ] Build a Personal Portfolio Webpage
 
