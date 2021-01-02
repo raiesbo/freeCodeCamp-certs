@@ -4,11 +4,13 @@ Final projects of each obtained freeCodeCamp certification.
 
 ## Responsive Web Design Certification
 
+[Certification](https://www.freecodecamp.org/certification/raiesbo/responsive-web-design)
+
 - [x] Build a Tribute Page
 - [x] Build a Survey Form
 - [x] Build a Product Landing Page
 - [x] Build a Technical Documentation Page
-- [ ] Build a Personal Portfolio Webpage
+- [x] Build a Personal Portfolio Webpage
 
 ## JavaScript Algorithms and Data Structures Certification
 

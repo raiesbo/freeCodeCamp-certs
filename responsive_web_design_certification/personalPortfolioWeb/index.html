@@ -8,45 +8,100 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
 
 <body>
 
     <header>
-        <h3>REB</h3>
-        <nav>
-            <ul>
-                <li href="#about">About</li>
-                <li href="#work">Work</li>
-                <li href="#contact">Contact</li>
-            </ul>
-        </nav>
+        <!-- <h3>R<span class="hide">aimon </span>E<span class="hide">spasa </span>B<span class="hide">ou</span></h3> -->
+        <div class="nav-container">
+            <div id="logo">
+                <h3>REB</h3>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#welcome-section"><span>01.</span> About</a></li>
+                    <li><a href="#projects"><span>02.</span> Work</a></li>
+                    <!-- <li><a href="#contact"><span>03.</span> Contact</a></li> -->
+                    <li><button>Resume</button></li>
+                </ul>
+            </nav>
+        </div>
 
     </header>
 
     <main>
-        <section id="about">
-            <h5>I am</h5>
-            <h1>Raimon Espasa</h1>
-            <h2>architect and web developer</h2>
+        <section id="welcome-section">
+            <div class="intro-container">
+                <h5 id="intro">Hi, my name is</h5>
+                <h1 id="name">Raimon Espasa Bou.</h1>
+                <h2 id="subtitle">Architect and web developer.</h2>
+                <p class="description">I'm an Architect and Web Developer based in Berlin, MA specializing in building
+                    (and occasionally designing) exceptional websites, applications, and everything in between.</p>
+                <button class="button">Get In Touch</button>
+            </div>
         </section>
 
-        <section id="work">
-            
+        <section id="projects">
+
+            <h2 class="section-title"><span class="section-num">02.</span> Projects</h2>
+
+            <div class="project-tile">
+                <img src="./img/archProject_500x300.jpg" alt="projects-picture" class="project-img">
+                <h5 class="project-title">Architecture Portfolio</h5>
+                <p class="project-description">Website dedicated to store my Architectutel projects and serve as an
+                    Online Portfolio. It is my first web project, acomplished in 2020 and hosted in firebase.</p>
+                <p class="tags">Html Css JS(ES6+)</p>
+                <div class="project-icons">
+                    <a href="https://github.com/raiesbo/archPortfolio" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+                    <a href="https://archportfolio.raimonespasa.com/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                </div>
+            </div>
+
+            <div class="project-tile">
+                <img src="./img/octoProject_500x300.jpg" alt="projects-picture" class="project-img">
+                <h5 class="project-title">Octocat Profiler</h5>
+                <p class="project-description">The project seeks to present the public github user information in a
+                    nicer looking way and provide some extra interesting stats.</p>
+                <p class="tags">React Html Css GitHub-API</p>
+                <div class="project-icons">
+                    <a href="https://github.com/raiesbo/octocatProfile" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+                    <a href="https://octocatprofile.raimonespasa.com/" target="_blank"><i
+                            class="fas fa-external-link-alt fa-lg"></i></a>
+                </div>
+            </div>
+
+            <div class="project-tile">
+                <img src="./img/documentationPortfolio_500x300.jpg" alt="projects-picture" class="project-img">
+                <h5 class="project-title">Documentation Web</h5>
+                <p class="project-description">Technology documentation project based on the freeCodeCamp final project
+                    for the Responsive Web Design Certification</p>
+                <p class="tags">Html Css</p>
+                <div class="project-icons">
+                    <a href="https://www.freecodecamp.org/raiesbo" id="profile-link" target="_blank"><i class="fab fa-free-code-camp fa-lg"></i></a>
+                    <a href="https://github.com/raiesbo/freeCodeCamp_certifications" target="_blank"><i
+                            class="fab fa-github fa-lg"></i></a>
+                    <a href="https://codepen.io/raiesbo/pen/bGwLPzr" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i></a>
+                </div>
+            </div>
+
         </section>
 
-        <section id="contact">
+        <!-- <section id="contact">
+            <h2 class="section-title"><span class="section-num">03.</span> Contact Me</h2>
 
-        </section>
-
+        </section> -->
 
     </main>
 
     <footer>
-
-
-
+        <div>
+            <h4> Built by RAIESBO</h4>
+        </div>
     </footer>
 
 </body>
