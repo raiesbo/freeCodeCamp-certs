@@ -26,19 +26,21 @@ app.get("/api/hello", function (req, res) {
 
 //const timestamp = Date.now();
 
+app.get("/api/timestamp", (req, res) => {
+  let utc = new Date().toUTCString();
+  let unix = new Date().getTime();
+  res.json({unix, utc})
+})
+
 app.get("/api/timestamp/:date", (req, res) => {
   let time = req.params.date;
   let unix,utc;
-  if (time.split("-").length == 3) {
+  if (new Date(time) != "Invalid Date") {
     utc = new Date(time).toUTCString();
     unix = new Date(time).getTime();
-  } else if (time.length >= 13) {
+  } else if (new Date(parseInt(time)).toUTCString() != "Invalid Date") {
     unix = parseInt(time)//.getTime();
     utc = new Date(unix).toUTCString();
-    console.log(utc, unix)
-  }else if (time == "") {
-    utc = new Date().toUTCString();
-    unix = Math.floor(new Date() / 1000);
   } else {
     res.json({ error : "Invalid Date" })
   }

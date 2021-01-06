@@ -29,3 +29,11 @@ Final projects of each obtained freeCodeCamp certification.
 - [ ] Build a Drum Machine
 - [ ] Build a JavaScript Calculator
 - [ ] Build a 25 + 5 Clock
+
+## APIs and Microservices Certification
+
+- [x] Timestamp Microservice
+- [x] Request Header Parser Microservice
+- [x] URL Shortener Microservice
+- [ ] Exercise Tracker
+- [ ] File Metadata Microservice
