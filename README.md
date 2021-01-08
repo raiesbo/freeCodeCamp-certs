@@ -36,4 +36,4 @@ Final projects of each obtained freeCodeCamp certification.
 - [x] Request Header Parser Microservice
 - [x] URL Shortener Microservice
 - [ ] Exercise Tracker
-- [ ] File Metadata Microservice
+- [x] File Metadata Microservice
