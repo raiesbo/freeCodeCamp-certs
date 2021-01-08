@@ -30,6 +30,14 @@ Final projects of each obtained freeCodeCamp certification.
 - [ ] Build a JavaScript Calculator
 - [ ] Build a 25 + 5 Clock
 
+## Data Visualization Certification
+
+- [ ] Visualize Data with a Bar Chart
+- [ ] Visualize Data with a Scatterplot Graph
+- [ ] Visualize Data with a Heat Map
+- [ ] Visualize Data with a Choropleth Map
+- [ ] Visualize Data with a Treemap Diagram
+
 ## APIs and Microservices Certification
 
 [Certification](https://www.freecodecamp.org/certification/raiesbo/apis-and-microservices)
@@ -39,3 +47,11 @@ Final projects of each obtained freeCodeCamp certification.
 - [x] URL Shortener Microservice
 - [x] Exercise Tracker
 - [x] File Metadata Microservice
+
+## Quality Assurance Certification
+
+- [ ] Metric-Imperial Converter
+- [ ] Issue Tracker
+- [ ] Personal Library
+- [ ] Sudoku Solver
+- [ ] American British Translator
