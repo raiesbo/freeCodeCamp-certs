@@ -32,8 +32,10 @@ Final projects of each obtained freeCodeCamp certification.
 
 ## APIs and Microservices Certification
 
+[Certification](https://www.freecodecamp.org/certification/raiesbo/apis-and-microservices)
+
 - [x] Timestamp Microservice
 - [x] Request Header Parser Microservice
 - [x] URL Shortener Microservice
-- [ ] Exercise Tracker
+- [x] Exercise Tracker
 - [x] File Metadata Microservice

@@ -15,20 +15,39 @@ app.get('/', (req, res) => {
 // CONNECTIN TO MONGOOSE
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
-// SCHEMA
+// USER SCHEMA + MODEL
 const userSchema = new Schema({
+  username: {
+    type:String,
+    required: true,
+    unique: true
+  }
+})
+
+const User = mongoose.model("User", userSchema);
+
+// WORKOUT SCHEMA + MODEL
+const workoutSchema = new Schema({
   username: {
     type:String,
     required: true
   },
-  trainings: {
-    type: Array,
-    default: []
+  description: {
+    type: String,
+    required: true
+  },
+  duration: {
+    type: Number,
+    required: true
+  },
+  date: {
+    type: Date//,
+    //default: Date.now
   }
-})
+});
 
-//MODEL
-const User = mongoose.model("User", userSchema);
+const Workout = mongoose.model("Workout", workoutSchema);
+
 
 // NEW USERS //
 app.use("/api/exercise/new-user", bodyParser.urlencoded({ extended: false }));
@@ -81,68 +100,83 @@ app.use("/api/exercise/add", bodyParser.urlencoded({ extended: true }));
 app.post("/api/exercise/add", (req, res) => {
   let {userId, date, duration, description } = req.body;
 
-  // PROOF DATA
+  // HANDLE MISSING DATA
   if (userId == "") return res.send('Cast to ObjectId failed for value "" at path "_id" for model "Users"');
   if (duration == "" || description == "") return res.send(`Path ${description == "" ? "`description`" : "`duration`"} is required.`);
-  if (date == "") {
-    date = new Date().toDateString();
-  };
+  date = new Date(date) != "Invalid Date" ? new Date(date) : Date.now();
 
-  // FIND THE USER
-  User.findOneAndUpdate(
-    {_id: userId},
-    {"$push": { trainings: {
-      date: new Date(date).toDateString(),
-      description,
-      duration: parseInt(duration)
-      }}
-    },
-    {"new": true},
-    (err, data) => {
+  // FIND USERNAME FROM ID
+  User.findById(userId, (err, user) => {
     if (err) return console.log(err)
-    if (data == null) return 
-    console.log(data)
-    res.json({
-      _id: userId,
-      username: data.username,
-      date: new Date(date).toDateString(),
-      duration: parseInt(duration),
-      description
+    if (user == null) return res.send("_id not found.")
+    console.log("user who workedout", user)
+    // CREATE TRAINING WITH PREVIOUS USERNAME
+    const training = new Workout({
+      username: user.username,
+      description,
+      duration,
+      date: date
     })
+
+    // console.log("DATES: ", date, Date(date), new Date(date).toDateString())
+
+    training.save((err, data) => {
+      if (err) return console.log(err);
+      console.log("new training", data)
+      res.json({
+        _id: user._id,
+        username: data.username,
+        date: data.date.toDateString(),
+        duration: data.duration,
+        description: data.description
+      });
+    });
   })
 })
 
 
 // LIST USERS TRAININGS //
-app.get("/api/exercise/log/:userId/:from?/:to?/:limit?", (req, res) => {
-  let id = req.params.userId;
-  let dateFrom = req.params.from;
-  let dateTo = req.params.to;
-  let limit = req.params.limit;
+app.get("/api/exercise/log?", (req, res) => {
+  let _id = req.query.userId;
+  let dateFrom = req.query.from;
+  let dateTo = req.query.to;
+  let limit = req.query.limit;
 
-  console.log( id, dateFrom, dateTo, limit)
+  //console.log("DATOS: ", id, dateFrom, dateTo, limit)
+  //console.log( new Date(dateFrom), new Date(dateTo))
 
   // TEST DATA
-  //if (!limit)
+  limit = parseInt(limit);
+  dateFrom = new Date(dateFrom) != "Invalid Date" ? new Date(dateFrom) : 0;
+  dateTo = new Date(dateTo) != "Invalid Date" ? new Date(dateTo) : Date.now();
 
-  User.findById(id)
-    .select({ trainings: 1 })
-    .limit(limit)
-    .exec((err, data) => {
+  // FIND USERNAME FROM ID
+  User.findById(_id, (err, data) => {
     if (err) return console.log(err)
     if (data == null) return res.send("_id not found.")
-    console.log(data)
-    res.json(data.trainings)
+
+    //FIND ALL TRAININGS FROM USERNAME
+    Workout.find({username: data.username, date: { $lte: dateTo, $gte: dateFrom }})
+      .limit(limit)
+      .select({_id: 0, __v: 0, username: 0})
+      .exec((err, work) => {
+      if (err) return console.log(err)
+      //console.log(work)
+      res.json({
+        _id: data._id,
+        username: data.username,
+        count: work.length,
+        log: work.map(e => ({
+            description: e.description,
+            duration: e.duration,
+            date: e.date.toDateString()
+        }))
+      })
+
+    })
+
   })
-
-
-
-
 })
-
-
-
-
 
 
 
