@@ -1,0 +1,27 @@
+:root {
+    --bg-color-main: white;
+    --bg-color-alt: rgb(235, 235, 235);
+
+    --box-shadow: rgb(136, 136, 136);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color-alt);
+}
+
+.main {
+    background-color: var(--bg-color-main);
+    box-shadow: 0 0 20px var(--box-shadow);
+}
