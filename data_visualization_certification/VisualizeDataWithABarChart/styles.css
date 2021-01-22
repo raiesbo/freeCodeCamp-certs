@@ -1,6 +1,6 @@
 :root {
     --bg-color-main: white;
-    --bg-color-alt: rgb(235, 235, 235);
+    --bg-color-alt: rgb(224, 224, 224);
 
     --box-shadow: rgb(136, 136, 136);
 }
@@ -24,4 +24,13 @@ body {
 .main {
     background-color: var(--bg-color-main);
     box-shadow: 0 0 20px var(--box-shadow);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#title {
+    font-size: 2rem;
 }
